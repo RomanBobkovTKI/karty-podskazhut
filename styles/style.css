@@ -20,3 +20,241 @@ li,
 figure {
   margin: 0;
 }
+
+:root {
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --bg-color__dak_theme: #f3efec;
+  --text-color__dak_theme: #312a4e;
+  --accent-color: transparent;
+  --main-font: Raleway;
+  --accent-font: 'STIX Two Text';
+  --main-font-size: 18px;
+  --first-letter-size: 30px;
+  --border-color-content-card: #312a4e;
+}
+
+.theme_dark {
+  --bg-color: #171717;
+  --text-color: #b3b3b3;
+  --accent-color: transparent;
+}
+
+.page {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--main-font, sans-serif);
+}
+
+.content-section {
+  padding: 0 5vw;
+}
+
+.content__title {
+  font-size: 30px;
+  padding: 7% 0 2.5% 0;
+}
+
+.content__text-block {
+  font-size: var(--main-font-size);
+}
+
+.content__text-block .content__paragraph:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.theme_dark
+  .content__text-block_type_first-lettered
+  .content__paragraph:first-child::first-letter {
+  border: 1px solid var(--text-color);
+  background-image: none;
+}
+
+.content__text-block_type_first-lettered
+  .content__paragraph:first-child::first-letter {
+  background-image: url('../images/Rectangle 6.png');
+  display: inline-block;
+  padding: 4px;
+  margin-bottom: 1px;
+  font-weight: bold;
+  font-size: var(--first-letter-size);
+}
+
+.content__app-url {
+  color: inherit !important;
+}
+
+.content__blockquote {
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--main-font-size);
+  line-height: 200%;
+
+  width: 75%;
+  padding: 0 0 1.5em 0;
+  margin: 0 auto;
+}
+
+.content__list {
+  list-style-type: none;
+  padding-inline-start: 40px;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.theme_dark .content__list-item::before {
+  background-image: url('../images/marker-dark.svg');
+}
+
+.content__list-item::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url('../images/marker-light.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.content__figure {
+  margin-block: 7%;
+  width: calc(100% + 10vw);
+  position: relative;
+  left: calc(-5vi);
+}
+
+.content__picture-caption {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #312a4e;
+}
+
+.content__picture {
+  width: 100%;
+}
+
+.theme_dark .content__card {
+  border: 1px solid #b3b3b3;
+}
+
+.content__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 7%;
+  aspect-ratio: 4/3;
+  border: 1px solid var(--border-color-content-card);
+}
+
+.content__card-title {
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  text-align: center;
+  display: block;
+}
+
+.colored-text {
+  position: relative;
+}
+
+.theme_dark .colored-text::after {
+  background-image: url('../images/pattern.svg');
+}
+
+.colored-text::after {
+  content: '';
+  position: absolute;
+  width: 3.7em;
+  height: 0.2em;
+  background-image: url('../images/Rectangle 9.png');
+  z-index: -1;
+  top: 35px;
+  right: -3px;
+}
+
+.header {
+  padding-top: 10%;
+}
+
+.heading {
+  font-family: var(--accent-font), sans-serif;
+  line-height: 90%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin: 0 0 40px 0;
+}
+
+.header__logo {
+  padding: 20px 0;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  font-family: inherit;
+}
+
+.header__theme-toggler {
+  display: flex;
+  list-style: none;
+  padding: 20px 0;
+  column-gap: 20px;
+}
+
+.header__theme-button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  color: var(--text-color);
+  font-size: var(--main-font-size);
+  background-color: var(--bg-color);
+}
+
+.header__theme-button:hover {
+  text-decoration: underline;
+}
+
+.header__theme-button_is-active {
+  position: relative;
+  font-weight: bold;
+}
+
+.header__theme-button_is-active:disabled {
+  pointer-events: none;
+}
+
+.theme_dark .header__theme-button_is-active::after {
+  background-image: url('../images/pattern.svg');
+}
+
+.header__theme-button_is-active::after {
+  content: '';
+  position: absolute;
+  width: 5em;
+  height: 0.5em;
+  background-image: url('../images/Rectangle 6.png');
+  top: 0.7em;
+  right: 0;
+  opacity: 50%;
+}
+
+.footer {
+  margin-top: 10%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: var(--main-font-size);
+}
