@@ -1,0 +1,13 @@
+:root {
+  /*--bg-color: #171717;*/
+  /*--text-color: #b3b3b3;*/
+
+  --bg-color: #f3efec;
+  --text-color: #312a4e;
+  --accent-color: transparent;
+  --main-font: Raleway;
+  --accent-font: 'STIX Two Text';
+  --main-font-size: 18px;
+  --first-letter-size: 30px;
+  --border-color-content-card: #312a4e;
+}
