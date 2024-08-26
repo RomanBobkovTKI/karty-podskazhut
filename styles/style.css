@@ -47,7 +47,7 @@ figure {
 }
 
 .content-section {
-  padding: 0 5vw;
+  padding: 0 5vi;
 }
 
 .content__title {
@@ -81,7 +81,7 @@ figure {
 }
 
 .content__app-url {
-  color: inherit !important;
+  color: inherit;
 }
 
 .content__blockquote {
@@ -202,6 +202,7 @@ figure {
   display: flex;
   justify-content: space-between;
   font-family: inherit;
+  align-items: center;
 }
 
 .header__theme-toggler {
@@ -248,13 +249,25 @@ figure {
   opacity: 50%;
 }
 
+.theme_dark .footer {
+  --border-color-content-card: #b3b3b3;
+
+  border-top: 1px solid var(--border-color-content-card);
+}
+
 .footer {
   margin-top: 10%;
   padding-top: 2.5%;
   padding-bottom: 2.5%;
   text-align: center;
+  border-top: 1px solid var(--border-color-content-card);
 }
 
 .footer__copyright {
   font-size: var(--main-font-size);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid currentColor;
 }
